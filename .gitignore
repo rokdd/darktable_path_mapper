@@ -1,0 +1,6 @@
+tasks.json
+.venv/
+__pycache__
+backup/*
+log.txt
+*.code-workspace

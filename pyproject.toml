@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "darktable-path-mapper"
+version = "0.1.0"
+description = ""
+authors = ["rokdd <rokdd@gmx.ch>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+poethepoet = "^0.24.4"
+click = "^8.1.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+[tool.poe.tasks]
+test         = "pytest --cov=my_app"                         # a simple command task
+serve.script = "my_app.service:run(debug=True)"              # python script based task
+tunnel.shell = "ssh -N -L 0.0.0.0:8080:$PROD:8080 $PROD &"   # (posix) shell based task
+map_path.script = "main:map_path()"              # python script based task
+task.script = "main:task()"              # python script based task
