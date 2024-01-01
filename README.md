@@ -9,4 +9,4 @@ You can add custom fields or mappings in the config folder. They will automatica
 - cleaning of the paths for duplicates
 - unix and windows path should be corrected
 - unix and windows default paths need to be implemented
-
+- currently working only for darktable
